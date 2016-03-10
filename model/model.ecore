@@ -3,4 +3,15 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="groupdpetrinet" nsURI="http://compute.dtu.dk/mbse/groupdpetrinet"
     nsPrefix="groupdpn">
   <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Place"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Transistion" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Transition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="split" eType="#//Type"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="join" eType="#//Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Arc" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Arc"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Type" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Attribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="And" eSuperTypes="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Or" eSuperTypes="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Xor" eSuperTypes="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Start" eSuperTypes="#//Place"/>
+  <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="#//Place"/>
 </ecore:EPackage>
