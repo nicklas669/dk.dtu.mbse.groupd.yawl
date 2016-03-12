@@ -14,4 +14,5 @@
   <eClassifiers xsi:type="ecore:EClass" name="Xor" eSuperTypes="#//Type"/>
   <eClassifiers xsi:type="ecore:EClass" name="Start" eSuperTypes="#//Place"/>
   <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="#//Place"/>
+  <eClassifiers xsi:type="ecore:EClass" name="YAWLnet" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//PetriNetType"/>
 </ecore:EPackage>
