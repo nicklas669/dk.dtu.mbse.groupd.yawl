@@ -6,16 +6,15 @@ Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: tutorial5.groupdpetrinet,
- tutorial5.groupdpetrinet.impl,
- tutorial5.groupdpetrinet.util,
- yawl.groupdpetrinet,
- yawl.groupdpetrinet.impl,
- yawl.groupdpetrinet.util,
- yawl.yawltypes,
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8yawl.yawltypes,
  yawl.yawltypes.impl,
  yawl.yawltypes.util
+Export-Package: yawltypes,
+ yawltypes.impl,
+ yawltypes.util,
+ yawlnet.yawltypes,
+ yawlnet.yawltypes.impl,
+ yawlnet.yawltypes.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.pnml.tools.epnk;visibility:=reexport

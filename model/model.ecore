@@ -2,18 +2,35 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="yawltypes" nsURI="http://compute.dtu.dk/mbse/groupdpetrinet"
     nsPrefix="groupdpn">
-  <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Place"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Transistion" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Transition">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="split" eType="#//Type"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="join" eType="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Place">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="marking" eType="#//PlaceType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Arc" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Arc"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Type" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Attribute"/>
-  <eClassifiers xsi:type="ecore:EClass" name="And" eSuperTypes="#//Type"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Or" eSuperTypes="#//Type"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Xor" eSuperTypes="#//Type"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Start" eSuperTypes="#//Place"/>
-  <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="#//Place"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Transistion" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Transition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="split" eType="#//TransitionType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="join" eType="#//TransitionType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Arc" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Arc">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ArcType"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YAWLnet" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//PetriNetType"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ResetArc" eSuperTypes="#//Arc"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TransitionType" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Attribute"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="TransitionTypes">
+    <eLiterals name="AND" value="1"/>
+    <eLiterals name="XOR" value="2" literal="XOR"/>
+    <eLiterals name="OR" value="3" literal="OR"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PlaceTypes">
+    <eLiterals name="normal" literal="Place"/>
+    <eLiterals name="read" value="1"/>
+    <eLiterals name="inhibit" value="2"/>
+    <eLiterals name="resetarc" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlaceType" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Attribute"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ArcType" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Attribute"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="ArcTypes">
+    <eLiterals name="normal"/>
+    <eLiterals name="read" value="1" literal="read"/>
+    <eLiterals name="inhibit" value="2" literal="inhibit"/>
+    <eLiterals name="resetarc" value="3" literal="resetarc"/>
+  </eClassifiers>
 </ecore:EPackage>

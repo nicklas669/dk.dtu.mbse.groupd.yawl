@@ -1,0 +1,268 @@
+/**
+ */
+package yawlnet.yawltypes;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import org.eclipse.emf.common.util.Enumerator;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the literals of the enumeration '<em><b>Place Types</b></em>',
+ * and utility methods for working with them.
+ * <!-- end-user-doc -->
+ * @see yawlnet.yawltypes.YawltypesPackage#getPlaceTypes()
+ * @model
+ * @generated
+ */
+public enum PlaceTypes implements Enumerator {
+	/**
+	 * The '<em><b>Normal</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NORMAL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	NORMAL(0, "normal", "Place"),
+
+	/**
+	 * The '<em><b>Read</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #READ_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	READ(1, "read", "read"),
+
+	/**
+	 * The '<em><b>Inhibit</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #INHIBIT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	INHIBIT(2, "inhibit", "inhibit"),
+
+	/**
+	 * The '<em><b>Resetarc</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #RESETARC_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	RESETARC(3, "resetarc", "resetarc");
+
+	/**
+	 * The '<em><b>Normal</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Normal</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #NORMAL
+	 * @model name="normal" literal="Place"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int NORMAL_VALUE = 0;
+
+	/**
+	 * The '<em><b>Read</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Read</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #READ
+	 * @model name="read"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int READ_VALUE = 1;
+
+	/**
+	 * The '<em><b>Inhibit</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Inhibit</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #INHIBIT
+	 * @model name="inhibit"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int INHIBIT_VALUE = 2;
+
+	/**
+	 * The '<em><b>Resetarc</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Resetarc</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #RESETARC
+	 * @model name="resetarc"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int RESETARC_VALUE = 3;
+
+	/**
+	 * An array of all the '<em><b>Place Types</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static final PlaceTypes[] VALUES_ARRAY =
+		new PlaceTypes[] {
+			NORMAL,
+			READ,
+			INHIBIT,
+			RESETARC,
+		};
+
+	/**
+	 * A public read-only list of all the '<em><b>Place Types</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final List<PlaceTypes> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+
+	/**
+	 * Returns the '<em><b>Place Types</b></em>' literal with the specified literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
+	 * @generated
+	 */
+	public static PlaceTypes get(String literal) {
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			PlaceTypes result = VALUES_ARRAY[i];
+			if (result.toString().equals(literal)) {
+				return result;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the '<em><b>Place Types</b></em>' literal with the specified name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
+	 * @generated
+	 */
+	public static PlaceTypes getByName(String name) {
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			PlaceTypes result = VALUES_ARRAY[i];
+			if (result.getName().equals(name)) {
+				return result;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the '<em><b>Place Types</b></em>' literal with the specified integer value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
+	 * @generated
+	 */
+	public static PlaceTypes get(int value) {
+		switch (value) {
+			case NORMAL_VALUE: return NORMAL;
+			case READ_VALUE: return READ;
+			case INHIBIT_VALUE: return INHIBIT;
+			case RESETARC_VALUE: return RESETARC;
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final int value;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final String name;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final String literal;
+
+	/**
+	 * Only this class can construct instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private PlaceTypes(int value, String name, String literal) {
+		this.value = value;
+		this.name = name;
+		this.literal = literal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getValue() {
+	  return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+	  return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLiteral() {
+	  return literal;
+	}
+
+	/**
+	 * Returns the literal value of the enumerator, which is its string representation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		return literal;
+	}
+	
+} //PlaceTypes
