@@ -20,9 +20,9 @@ public class YAWLnetImpl extends PetriNetTypeImpl implements YAWLnet {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	protected YAWLnetImpl() {
+	public YAWLnetImpl() {
 		super();
 	}
 
@@ -34,6 +34,11 @@ public class YAWLnetImpl extends PetriNetTypeImpl implements YAWLnet {
 	@Override
 	protected EClass eStaticClass() {
 		return YawltypesPackage.Literals.YAW_LNET;
+	}
+
+	@Override
+	public String toString() {
+		return "YAWLNet by Group G - DTU 2016";
 	}
 
 } //YAWLnetImpl
