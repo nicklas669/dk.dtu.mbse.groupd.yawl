@@ -4,6 +4,7 @@ package yawlnet.yawltypes.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -31,7 +32,7 @@ import yawlnet.yawltypes.YawltypesPackage;
  */
 public class TransistionImpl extends TransitionImpl implements Transistion {
 	/**
-	 * The cached value of the '{@link #getSplit() <em>Split</em>}' reference.
+	 * The cached value of the '{@link #getSplit() <em>Split</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSplit()
@@ -41,7 +42,7 @@ public class TransistionImpl extends TransitionImpl implements Transistion {
 	protected TransitionType split;
 
 	/**
-	 * The cached value of the '{@link #getJoin() <em>Join</em>}' reference.
+	 * The cached value of the '{@link #getJoin() <em>Join</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getJoin()
@@ -75,14 +76,6 @@ public class TransistionImpl extends TransitionImpl implements Transistion {
 	 * @generated
 	 */
 	public TransitionType getSplit() {
-		if (split != null && split.eIsProxy()) {
-			InternalEObject oldSplit = (InternalEObject)split;
-			split = (TransitionType)eResolveProxy(oldSplit);
-			if (split != oldSplit) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, YawltypesPackage.TRANSISTION__SPLIT, oldSplit, split));
-			}
-		}
 		return split;
 	}
 
@@ -91,8 +84,14 @@ public class TransistionImpl extends TransitionImpl implements Transistion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TransitionType basicGetSplit() {
-		return split;
+	public NotificationChain basicSetSplit(TransitionType newSplit, NotificationChain msgs) {
+		TransitionType oldSplit = split;
+		split = newSplit;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, YawltypesPackage.TRANSISTION__SPLIT, oldSplit, newSplit);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -101,10 +100,17 @@ public class TransistionImpl extends TransitionImpl implements Transistion {
 	 * @generated
 	 */
 	public void setSplit(TransitionType newSplit) {
-		TransitionType oldSplit = split;
-		split = newSplit;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, YawltypesPackage.TRANSISTION__SPLIT, oldSplit, split));
+		if (newSplit != split) {
+			NotificationChain msgs = null;
+			if (split != null)
+				msgs = ((InternalEObject)split).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - YawltypesPackage.TRANSISTION__SPLIT, null, msgs);
+			if (newSplit != null)
+				msgs = ((InternalEObject)newSplit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - YawltypesPackage.TRANSISTION__SPLIT, null, msgs);
+			msgs = basicSetSplit(newSplit, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, YawltypesPackage.TRANSISTION__SPLIT, newSplit, newSplit));
 	}
 
 	/**
@@ -113,14 +119,6 @@ public class TransistionImpl extends TransitionImpl implements Transistion {
 	 * @generated
 	 */
 	public TransitionType getJoin() {
-		if (join != null && join.eIsProxy()) {
-			InternalEObject oldJoin = (InternalEObject)join;
-			join = (TransitionType)eResolveProxy(oldJoin);
-			if (join != oldJoin) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, YawltypesPackage.TRANSISTION__JOIN, oldJoin, join));
-			}
-		}
 		return join;
 	}
 
@@ -129,8 +127,14 @@ public class TransistionImpl extends TransitionImpl implements Transistion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TransitionType basicGetJoin() {
-		return join;
+	public NotificationChain basicSetJoin(TransitionType newJoin, NotificationChain msgs) {
+		TransitionType oldJoin = join;
+		join = newJoin;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, YawltypesPackage.TRANSISTION__JOIN, oldJoin, newJoin);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -139,10 +143,33 @@ public class TransistionImpl extends TransitionImpl implements Transistion {
 	 * @generated
 	 */
 	public void setJoin(TransitionType newJoin) {
-		TransitionType oldJoin = join;
-		join = newJoin;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, YawltypesPackage.TRANSISTION__JOIN, oldJoin, join));
+		if (newJoin != join) {
+			NotificationChain msgs = null;
+			if (join != null)
+				msgs = ((InternalEObject)join).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - YawltypesPackage.TRANSISTION__JOIN, null, msgs);
+			if (newJoin != null)
+				msgs = ((InternalEObject)newJoin).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - YawltypesPackage.TRANSISTION__JOIN, null, msgs);
+			msgs = basicSetJoin(newJoin, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, YawltypesPackage.TRANSISTION__JOIN, newJoin, newJoin));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case YawltypesPackage.TRANSISTION__SPLIT:
+				return basicSetSplit(null, msgs);
+			case YawltypesPackage.TRANSISTION__JOIN:
+				return basicSetJoin(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -154,11 +181,9 @@ public class TransistionImpl extends TransitionImpl implements Transistion {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case YawltypesPackage.TRANSISTION__SPLIT:
-				if (resolve) return getSplit();
-				return basicGetSplit();
+				return getSplit();
 			case YawltypesPackage.TRANSISTION__JOIN:
-				if (resolve) return getJoin();
-				return basicGetJoin();
+				return getJoin();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

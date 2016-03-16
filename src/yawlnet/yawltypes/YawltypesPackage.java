@@ -2,6 +2,7 @@
  */
 package yawlnet.yawltypes;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
@@ -131,7 +132,7 @@ public interface YawltypesPackage extends EPackage {
 	int PLACE__IN = PnmlcoremodelPackage.PLACE__IN;
 
 	/**
-	 * The feature id for the '<em><b>Marking</b></em>' reference.
+	 * The feature id for the '<em><b>Marking</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -222,7 +223,7 @@ public interface YawltypesPackage extends EPackage {
 	int TRANSISTION__IN = PnmlcoremodelPackage.TRANSITION__IN;
 
 	/**
-	 * The feature id for the '<em><b>Split</b></em>' reference.
+	 * The feature id for the '<em><b>Split</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -231,7 +232,7 @@ public interface YawltypesPackage extends EPackage {
 	int TRANSISTION__SPLIT = PnmlcoremodelPackage.TRANSITION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Join</b></em>' reference.
+	 * The feature id for the '<em><b>Join</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -322,7 +323,7 @@ public interface YawltypesPackage extends EPackage {
 	int ARC__TARGET = PnmlcoremodelPackage.ARC__TARGET;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -396,13 +397,22 @@ public interface YawltypesPackage extends EPackage {
 	int TRANSITION_TYPE__UNKNOWN = PnmlcoremodelPackage.ATTRIBUTE__UNKNOWN;
 
 	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION_TYPE__TEXT = PnmlcoremodelPackage.ATTRIBUTE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Transition Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION_TYPE_FEATURE_COUNT = PnmlcoremodelPackage.ATTRIBUTE_FEATURE_COUNT + 0;
+	int TRANSITION_TYPE_FEATURE_COUNT = PnmlcoremodelPackage.ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link yawlnet.yawltypes.impl.PlaceTypeImpl <em>Place Type</em>}' class.
@@ -442,13 +452,22 @@ public interface YawltypesPackage extends EPackage {
 	int PLACE_TYPE__UNKNOWN = PnmlcoremodelPackage.ATTRIBUTE__UNKNOWN;
 
 	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLACE_TYPE__TEXT = PnmlcoremodelPackage.ATTRIBUTE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Place Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE_TYPE_FEATURE_COUNT = PnmlcoremodelPackage.ATTRIBUTE_FEATURE_COUNT + 0;
+	int PLACE_TYPE_FEATURE_COUNT = PnmlcoremodelPackage.ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link yawlnet.yawltypes.impl.ArcTypeImpl <em>Arc Type</em>}' class.
@@ -488,13 +507,22 @@ public interface YawltypesPackage extends EPackage {
 	int ARC_TYPE__UNKNOWN = PnmlcoremodelPackage.ATTRIBUTE__UNKNOWN;
 
 	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_TYPE__TEXT = PnmlcoremodelPackage.ATTRIBUTE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Arc Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_TYPE_FEATURE_COUNT = PnmlcoremodelPackage.ATTRIBUTE_FEATURE_COUNT + 0;
+	int ARC_TYPE_FEATURE_COUNT = PnmlcoremodelPackage.ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link yawlnet.yawltypes.TransitionTypes <em>Transition Types</em>}' enum.
@@ -538,10 +566,10 @@ public interface YawltypesPackage extends EPackage {
 	EClass getPlace();
 
 	/**
-	 * Returns the meta object for the reference '{@link yawlnet.yawltypes.Place#getMarking <em>Marking</em>}'.
+	 * Returns the meta object for the containment reference '{@link yawlnet.yawltypes.Place#getMarking <em>Marking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Marking</em>'.
+	 * @return the meta object for the containment reference '<em>Marking</em>'.
 	 * @see yawlnet.yawltypes.Place#getMarking()
 	 * @see #getPlace()
 	 * @generated
@@ -559,10 +587,10 @@ public interface YawltypesPackage extends EPackage {
 	EClass getTransistion();
 
 	/**
-	 * Returns the meta object for the reference '{@link yawlnet.yawltypes.Transistion#getSplit <em>Split</em>}'.
+	 * Returns the meta object for the containment reference '{@link yawlnet.yawltypes.Transistion#getSplit <em>Split</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Split</em>'.
+	 * @return the meta object for the containment reference '<em>Split</em>'.
 	 * @see yawlnet.yawltypes.Transistion#getSplit()
 	 * @see #getTransistion()
 	 * @generated
@@ -570,10 +598,10 @@ public interface YawltypesPackage extends EPackage {
 	EReference getTransistion_Split();
 
 	/**
-	 * Returns the meta object for the reference '{@link yawlnet.yawltypes.Transistion#getJoin <em>Join</em>}'.
+	 * Returns the meta object for the containment reference '{@link yawlnet.yawltypes.Transistion#getJoin <em>Join</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Join</em>'.
+	 * @return the meta object for the containment reference '<em>Join</em>'.
 	 * @see yawlnet.yawltypes.Transistion#getJoin()
 	 * @see #getTransistion()
 	 * @generated
@@ -591,10 +619,10 @@ public interface YawltypesPackage extends EPackage {
 	EClass getArc();
 
 	/**
-	 * Returns the meta object for the reference '{@link yawlnet.yawltypes.Arc#getType <em>Type</em>}'.
+	 * Returns the meta object for the containment reference '{@link yawlnet.yawltypes.Arc#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @return the meta object for the containment reference '<em>Type</em>'.
 	 * @see yawlnet.yawltypes.Arc#getType()
 	 * @see #getArc()
 	 * @generated
@@ -622,6 +650,17 @@ public interface YawltypesPackage extends EPackage {
 	EClass getTransitionType();
 
 	/**
+	 * Returns the meta object for the attribute '{@link yawlnet.yawltypes.TransitionType#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see yawlnet.yawltypes.TransitionType#getText()
+	 * @see #getTransitionType()
+	 * @generated
+	 */
+	EAttribute getTransitionType_Text();
+
+	/**
 	 * Returns the meta object for class '{@link yawlnet.yawltypes.PlaceType <em>Place Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -632,6 +671,17 @@ public interface YawltypesPackage extends EPackage {
 	EClass getPlaceType();
 
 	/**
+	 * Returns the meta object for the attribute '{@link yawlnet.yawltypes.PlaceType#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see yawlnet.yawltypes.PlaceType#getText()
+	 * @see #getPlaceType()
+	 * @generated
+	 */
+	EAttribute getPlaceType_Text();
+
+	/**
 	 * Returns the meta object for class '{@link yawlnet.yawltypes.ArcType <em>Arc Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -640,6 +690,17 @@ public interface YawltypesPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getArcType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link yawlnet.yawltypes.ArcType#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see yawlnet.yawltypes.ArcType#getText()
+	 * @see #getArcType()
+	 * @generated
+	 */
+	EAttribute getArcType_Text();
 
 	/**
 	 * Returns the meta object for enum '{@link yawlnet.yawltypes.TransitionTypes <em>Transition Types</em>}'.
@@ -704,7 +765,7 @@ public interface YawltypesPackage extends EPackage {
 		EClass PLACE = eINSTANCE.getPlace();
 
 		/**
-		 * The meta object literal for the '<em><b>Marking</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Marking</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -722,7 +783,7 @@ public interface YawltypesPackage extends EPackage {
 		EClass TRANSISTION = eINSTANCE.getTransistion();
 
 		/**
-		 * The meta object literal for the '<em><b>Split</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Split</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -730,7 +791,7 @@ public interface YawltypesPackage extends EPackage {
 		EReference TRANSISTION__SPLIT = eINSTANCE.getTransistion_Split();
 
 		/**
-		 * The meta object literal for the '<em><b>Join</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Join</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -748,7 +809,7 @@ public interface YawltypesPackage extends EPackage {
 		EClass ARC = eINSTANCE.getArc();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -776,6 +837,14 @@ public interface YawltypesPackage extends EPackage {
 		EClass TRANSITION_TYPE = eINSTANCE.getTransitionType();
 
 		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRANSITION_TYPE__TEXT = eINSTANCE.getTransitionType_Text();
+
+		/**
 		 * The meta object literal for the '{@link yawlnet.yawltypes.impl.PlaceTypeImpl <em>Place Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -786,6 +855,14 @@ public interface YawltypesPackage extends EPackage {
 		EClass PLACE_TYPE = eINSTANCE.getPlaceType();
 
 		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PLACE_TYPE__TEXT = eINSTANCE.getPlaceType_Text();
+
+		/**
 		 * The meta object literal for the '{@link yawlnet.yawltypes.impl.ArcTypeImpl <em>Arc Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -794,6 +871,14 @@ public interface YawltypesPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ARC_TYPE = eINSTANCE.getArcType();
+
+		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARC_TYPE__TEXT = eINSTANCE.getArcType_Text();
 
 		/**
 		 * The meta object literal for the '{@link yawlnet.yawltypes.TransitionTypes <em>Transition Types</em>}' enum.

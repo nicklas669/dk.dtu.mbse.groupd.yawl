@@ -4,6 +4,7 @@ package yawlnet.yawltypes.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -28,7 +29,7 @@ import yawlnet.yawltypes.YawltypesPackage;
  */
 public class PlaceImpl extends org.pnml.tools.epnk.pnmlcoremodel.impl.PlaceImpl implements Place {
 	/**
-	 * The cached value of the '{@link #getMarking() <em>Marking</em>}' reference.
+	 * The cached value of the '{@link #getMarking() <em>Marking</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getMarking()
@@ -62,14 +63,6 @@ public class PlaceImpl extends org.pnml.tools.epnk.pnmlcoremodel.impl.PlaceImpl 
 	 * @generated
 	 */
 	public PlaceType getMarking() {
-		if (marking != null && marking.eIsProxy()) {
-			InternalEObject oldMarking = (InternalEObject)marking;
-			marking = (PlaceType)eResolveProxy(oldMarking);
-			if (marking != oldMarking) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, YawltypesPackage.PLACE__MARKING, oldMarking, marking));
-			}
-		}
 		return marking;
 	}
 
@@ -78,8 +71,14 @@ public class PlaceImpl extends org.pnml.tools.epnk.pnmlcoremodel.impl.PlaceImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PlaceType basicGetMarking() {
-		return marking;
+	public NotificationChain basicSetMarking(PlaceType newMarking, NotificationChain msgs) {
+		PlaceType oldMarking = marking;
+		marking = newMarking;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, YawltypesPackage.PLACE__MARKING, oldMarking, newMarking);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -88,10 +87,31 @@ public class PlaceImpl extends org.pnml.tools.epnk.pnmlcoremodel.impl.PlaceImpl 
 	 * @generated
 	 */
 	public void setMarking(PlaceType newMarking) {
-		PlaceType oldMarking = marking;
-		marking = newMarking;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, YawltypesPackage.PLACE__MARKING, oldMarking, marking));
+		if (newMarking != marking) {
+			NotificationChain msgs = null;
+			if (marking != null)
+				msgs = ((InternalEObject)marking).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - YawltypesPackage.PLACE__MARKING, null, msgs);
+			if (newMarking != null)
+				msgs = ((InternalEObject)newMarking).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - YawltypesPackage.PLACE__MARKING, null, msgs);
+			msgs = basicSetMarking(newMarking, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, YawltypesPackage.PLACE__MARKING, newMarking, newMarking));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case YawltypesPackage.PLACE__MARKING:
+				return basicSetMarking(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -103,8 +123,7 @@ public class PlaceImpl extends org.pnml.tools.epnk.pnmlcoremodel.impl.PlaceImpl 
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case YawltypesPackage.PLACE__MARKING:
-				if (resolve) return getMarking();
-				return basicGetMarking();
+				return getMarking();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

@@ -39,16 +39,6 @@ public enum ArcTypes implements Enumerator {
 	READ(1, "read", "read"),
 
 	/**
-	 * The '<em><b>Inhibit</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #INHIBIT_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	INHIBIT(2, "inhibit", "inhibit"),
-
-	/**
 	 * The '<em><b>Resetarc</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,7 +46,7 @@ public enum ArcTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RESETARC(3, "resetarc", "resetarc");
+	RESETARC(2, "resetarc", "resetarc");
 
 	/**
 	 * The '<em><b>Normal</b></em>' literal value.
@@ -89,21 +79,6 @@ public enum ArcTypes implements Enumerator {
 	public static final int READ_VALUE = 1;
 
 	/**
-	 * The '<em><b>Inhibit</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Inhibit</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #INHIBIT
-	 * @model name="inhibit"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int INHIBIT_VALUE = 2;
-
-	/**
 	 * The '<em><b>Resetarc</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -116,7 +91,7 @@ public enum ArcTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int RESETARC_VALUE = 3;
+	public static final int RESETARC_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>Arc Types</b></em>' enumerators.
@@ -128,7 +103,6 @@ public enum ArcTypes implements Enumerator {
 		new ArcTypes[] {
 			NORMAL,
 			READ,
-			INHIBIT,
 			RESETARC,
 		};
 
@@ -188,7 +162,6 @@ public enum ArcTypes implements Enumerator {
 		switch (value) {
 			case NORMAL_VALUE: return NORMAL;
 			case READ_VALUE: return READ;
-			case INHIBIT_VALUE: return INHIBIT;
 			case RESETARC_VALUE: return RESETARC;
 		}
 		return null;

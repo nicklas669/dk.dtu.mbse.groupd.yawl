@@ -23,52 +23,52 @@ import org.pnml.tools.epnk.pnmlcoremodel.Transition;
  */
 public interface Transistion extends Transition {
 	/**
-	 * Returns the value of the '<em><b>Split</b></em>' reference.
+	 * Returns the value of the '<em><b>Split</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Split</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Split</em>' reference.
+	 * @return the value of the '<em>Split</em>' containment reference.
 	 * @see #setSplit(TransitionType)
 	 * @see yawlnet.yawltypes.YawltypesPackage#getTransistion_Split()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	TransitionType getSplit();
 
 	/**
-	 * Sets the value of the '{@link yawlnet.yawltypes.Transistion#getSplit <em>Split</em>}' reference.
+	 * Sets the value of the '{@link yawlnet.yawltypes.Transistion#getSplit <em>Split</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Split</em>' reference.
+	 * @param value the new value of the '<em>Split</em>' containment reference.
 	 * @see #getSplit()
 	 * @generated
 	 */
 	void setSplit(TransitionType value);
 
 	/**
-	 * Returns the value of the '<em><b>Join</b></em>' reference.
+	 * Returns the value of the '<em><b>Join</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Join</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Join</em>' reference.
+	 * @return the value of the '<em>Join</em>' containment reference.
 	 * @see #setJoin(TransitionType)
 	 * @see yawlnet.yawltypes.YawltypesPackage#getTransistion_Join()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	TransitionType getJoin();
 
 	/**
-	 * Sets the value of the '{@link yawlnet.yawltypes.Transistion#getJoin <em>Join</em>}' reference.
+	 * Sets the value of the '{@link yawlnet.yawltypes.Transistion#getJoin <em>Join</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Join</em>' reference.
+	 * @param value the new value of the '<em>Join</em>' containment reference.
 	 * @see #getJoin()
 	 * @generated
 	 */

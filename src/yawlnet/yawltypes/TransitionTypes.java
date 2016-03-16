@@ -26,7 +26,7 @@ public enum TransitionTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	AND(1, "AND", "AND"),
+	AND(0, "AND", "AND"),
 
 	/**
 	 * The '<em><b>XOR</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum TransitionTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	XOR(2, "XOR", "XOR"),
+	XOR(1, "XOR", "XOR"),
 
 	/**
 	 * The '<em><b>OR</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum TransitionTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	OR(3, "OR", "OR");
+	OR(2, "OR", "OR");
 
 	/**
 	 * The '<em><b>AND</b></em>' literal value.
@@ -61,7 +61,7 @@ public enum TransitionTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int AND_VALUE = 1;
+	public static final int AND_VALUE = 0;
 
 	/**
 	 * The '<em><b>XOR</b></em>' literal value.
@@ -76,7 +76,7 @@ public enum TransitionTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int XOR_VALUE = 2;
+	public static final int XOR_VALUE = 1;
 
 	/**
 	 * The '<em><b>OR</b></em>' literal value.
@@ -91,7 +91,7 @@ public enum TransitionTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int OR_VALUE = 3;
+	public static final int OR_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>Transition Types</b></em>' enumerators.
