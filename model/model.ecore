@@ -40,7 +40,6 @@
   <eClassifiers xsi:type="ecore:EEnum" name="ArcTypes">
     <eLiterals name="normal"/>
     <eLiterals name="read" value="1" literal="read"/>
-    <eLiterals name="inhibit" value="2" literal="inhibit"/>
-    <eLiterals name="resetarc" value="3" literal="resetarc"/>
+    <eLiterals name="resetarc" value="2" literal="resetarc"/>
   </eClassifiers>
 </ecore:EPackage>
