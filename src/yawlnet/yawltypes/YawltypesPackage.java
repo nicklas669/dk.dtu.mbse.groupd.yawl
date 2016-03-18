@@ -132,13 +132,13 @@ public interface YawltypesPackage extends EPackage {
 	int PLACE__IN = PnmlcoremodelPackage.PLACE__IN;
 
 	/**
-	 * The feature id for the '<em><b>Marking</b></em>' containment reference.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE__MARKING = PnmlcoremodelPackage.PLACE_FEATURE_COUNT + 0;
+	int PLACE__TYPE = PnmlcoremodelPackage.PLACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Place</em>' class.
@@ -150,14 +150,14 @@ public interface YawltypesPackage extends EPackage {
 	int PLACE_FEATURE_COUNT = PnmlcoremodelPackage.PLACE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link yawlnet.yawltypes.impl.TransistionImpl <em>Transistion</em>}' class.
+	 * The meta object id for the '{@link yawlnet.yawltypes.impl.TransitionImpl <em>Transition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see yawlnet.yawltypes.impl.TransistionImpl
-	 * @see yawlnet.yawltypes.impl.YawltypesPackageImpl#getTransistion()
+	 * @see yawlnet.yawltypes.impl.TransitionImpl
+	 * @see yawlnet.yawltypes.impl.YawltypesPackageImpl#getTransition()
 	 * @generated
 	 */
-	int TRANSISTION = 1;
+	int TRANSITION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -166,7 +166,7 @@ public interface YawltypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSISTION__ID = PnmlcoremodelPackage.TRANSITION__ID;
+	int TRANSITION__ID = PnmlcoremodelPackage.TRANSITION__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -175,7 +175,7 @@ public interface YawltypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSISTION__NAME = PnmlcoremodelPackage.TRANSITION__NAME;
+	int TRANSITION__NAME = PnmlcoremodelPackage.TRANSITION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Toolspecific</b></em>' containment reference list.
@@ -184,7 +184,7 @@ public interface YawltypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSISTION__TOOLSPECIFIC = PnmlcoremodelPackage.TRANSITION__TOOLSPECIFIC;
+	int TRANSITION__TOOLSPECIFIC = PnmlcoremodelPackage.TRANSITION__TOOLSPECIFIC;
 
 	/**
 	 * The feature id for the '<em><b>Graphics</b></em>' containment reference.
@@ -193,7 +193,7 @@ public interface YawltypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSISTION__GRAPHICS = PnmlcoremodelPackage.TRANSITION__GRAPHICS;
+	int TRANSITION__GRAPHICS = PnmlcoremodelPackage.TRANSITION__GRAPHICS;
 
 	/**
 	 * The feature id for the '<em><b>Unknown</b></em>' containment reference list.
@@ -202,7 +202,7 @@ public interface YawltypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSISTION__UNKNOWN = PnmlcoremodelPackage.TRANSITION__UNKNOWN;
+	int TRANSITION__UNKNOWN = PnmlcoremodelPackage.TRANSITION__UNKNOWN;
 
 	/**
 	 * The feature id for the '<em><b>Out</b></em>' reference list.
@@ -211,7 +211,7 @@ public interface YawltypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSISTION__OUT = PnmlcoremodelPackage.TRANSITION__OUT;
+	int TRANSITION__OUT = PnmlcoremodelPackage.TRANSITION__OUT;
 
 	/**
 	 * The feature id for the '<em><b>In</b></em>' reference list.
@@ -220,7 +220,7 @@ public interface YawltypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSISTION__IN = PnmlcoremodelPackage.TRANSITION__IN;
+	int TRANSITION__IN = PnmlcoremodelPackage.TRANSITION__IN;
 
 	/**
 	 * The feature id for the '<em><b>Split</b></em>' containment reference.
@@ -229,7 +229,7 @@ public interface YawltypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSISTION__SPLIT = PnmlcoremodelPackage.TRANSITION_FEATURE_COUNT + 0;
+	int TRANSITION__SPLIT = PnmlcoremodelPackage.TRANSITION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Join</b></em>' containment reference.
@@ -238,16 +238,16 @@ public interface YawltypesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSISTION__JOIN = PnmlcoremodelPackage.TRANSITION_FEATURE_COUNT + 1;
+	int TRANSITION__JOIN = PnmlcoremodelPackage.TRANSITION_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Transistion</em>' class.
+	 * The number of structural features of the '<em>Transition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSISTION_FEATURE_COUNT = PnmlcoremodelPackage.TRANSITION_FEATURE_COUNT + 2;
+	int TRANSITION_FEATURE_COUNT = PnmlcoremodelPackage.TRANSITION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link yawlnet.yawltypes.impl.ArcImpl <em>Arc</em>}' class.
@@ -566,47 +566,47 @@ public interface YawltypesPackage extends EPackage {
 	EClass getPlace();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link yawlnet.yawltypes.Place#getMarking <em>Marking</em>}'.
+	 * Returns the meta object for the containment reference '{@link yawlnet.yawltypes.Place#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Marking</em>'.
-	 * @see yawlnet.yawltypes.Place#getMarking()
+	 * @return the meta object for the containment reference '<em>Type</em>'.
+	 * @see yawlnet.yawltypes.Place#getType()
 	 * @see #getPlace()
 	 * @generated
 	 */
-	EReference getPlace_Marking();
+	EReference getPlace_Type();
 
 	/**
-	 * Returns the meta object for class '{@link yawlnet.yawltypes.Transistion <em>Transistion</em>}'.
+	 * Returns the meta object for class '{@link yawlnet.yawltypes.Transition <em>Transition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Transistion</em>'.
-	 * @see yawlnet.yawltypes.Transistion
+	 * @return the meta object for class '<em>Transition</em>'.
+	 * @see yawlnet.yawltypes.Transition
 	 * @generated
 	 */
-	EClass getTransistion();
+	EClass getTransition();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link yawlnet.yawltypes.Transistion#getSplit <em>Split</em>}'.
+	 * Returns the meta object for the containment reference '{@link yawlnet.yawltypes.Transition#getSplit <em>Split</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Split</em>'.
-	 * @see yawlnet.yawltypes.Transistion#getSplit()
-	 * @see #getTransistion()
+	 * @see yawlnet.yawltypes.Transition#getSplit()
+	 * @see #getTransition()
 	 * @generated
 	 */
-	EReference getTransistion_Split();
+	EReference getTransition_Split();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link yawlnet.yawltypes.Transistion#getJoin <em>Join</em>}'.
+	 * Returns the meta object for the containment reference '{@link yawlnet.yawltypes.Transition#getJoin <em>Join</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Join</em>'.
-	 * @see yawlnet.yawltypes.Transistion#getJoin()
-	 * @see #getTransistion()
+	 * @see yawlnet.yawltypes.Transition#getJoin()
+	 * @see #getTransition()
 	 * @generated
 	 */
-	EReference getTransistion_Join();
+	EReference getTransition_Join();
 
 	/**
 	 * Returns the meta object for class '{@link yawlnet.yawltypes.Arc <em>Arc</em>}'.
@@ -765,22 +765,22 @@ public interface YawltypesPackage extends EPackage {
 		EClass PLACE = eINSTANCE.getPlace();
 
 		/**
-		 * The meta object literal for the '<em><b>Marking</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PLACE__MARKING = eINSTANCE.getPlace_Marking();
+		EReference PLACE__TYPE = eINSTANCE.getPlace_Type();
 
 		/**
-		 * The meta object literal for the '{@link yawlnet.yawltypes.impl.TransistionImpl <em>Transistion</em>}' class.
+		 * The meta object literal for the '{@link yawlnet.yawltypes.impl.TransitionImpl <em>Transition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see yawlnet.yawltypes.impl.TransistionImpl
-		 * @see yawlnet.yawltypes.impl.YawltypesPackageImpl#getTransistion()
+		 * @see yawlnet.yawltypes.impl.TransitionImpl
+		 * @see yawlnet.yawltypes.impl.YawltypesPackageImpl#getTransition()
 		 * @generated
 		 */
-		EClass TRANSISTION = eINSTANCE.getTransistion();
+		EClass TRANSITION = eINSTANCE.getTransition();
 
 		/**
 		 * The meta object literal for the '<em><b>Split</b></em>' containment reference feature.
@@ -788,7 +788,7 @@ public interface YawltypesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRANSISTION__SPLIT = eINSTANCE.getTransistion_Split();
+		EReference TRANSITION__SPLIT = eINSTANCE.getTransition_Split();
 
 		/**
 		 * The meta object literal for the '<em><b>Join</b></em>' containment reference feature.
@@ -796,7 +796,7 @@ public interface YawltypesPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TRANSISTION__JOIN = eINSTANCE.getTransistion_Join();
+		EReference TRANSITION__JOIN = eINSTANCE.getTransition_Join();
 
 		/**
 		 * The meta object literal for the '{@link yawlnet.yawltypes.impl.ArcImpl <em>Arc</em>}' class.

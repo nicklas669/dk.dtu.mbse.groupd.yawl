@@ -26,37 +26,25 @@ public enum PlaceTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NORMAL(0, "normal", "Place"),
+	NORMAL(0, "normal", "normal"),
 
 	/**
-	 * The '<em><b>Read</b></em>' literal object.
+	 * The '<em><b>Start</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #READ_VALUE
+	 * @see #START_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	READ(1, "read", "read"),
-
-	/**
-	 * The '<em><b>Inhibit</b></em>' literal object.
+	START(1, "start", "start"), /**
+	 * The '<em><b>End</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #INHIBIT_VALUE
+	 * @see #END_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	INHIBIT(2, "inhibit", "inhibit"),
-
-	/**
-	 * The '<em><b>Resetarc</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #RESETARC_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	RESETARC(3, "resetarc", "resetarc");
+	END(2, "end", "end");
 
 	/**
 	 * The '<em><b>Normal</b></em>' literal value.
@@ -67,56 +55,41 @@ public enum PlaceTypes implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #NORMAL
-	 * @model name="normal" literal="Place"
+	 * @model name="normal"
 	 * @generated
 	 * @ordered
 	 */
 	public static final int NORMAL_VALUE = 0;
 
 	/**
-	 * The '<em><b>Read</b></em>' literal value.
+	 * The '<em><b>Start</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Read</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Start</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #READ
-	 * @model name="read"
+	 * @see #START
+	 * @model name="start"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int READ_VALUE = 1;
+	public static final int START_VALUE = 1;
 
 	/**
-	 * The '<em><b>Inhibit</b></em>' literal value.
+	 * The '<em><b>End</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Inhibit</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>End</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #INHIBIT
-	 * @model name="inhibit"
+	 * @see #END
+	 * @model name="end"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int INHIBIT_VALUE = 2;
-
-	/**
-	 * The '<em><b>Resetarc</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Resetarc</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #RESETARC
-	 * @model name="resetarc"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int RESETARC_VALUE = 3;
+	public static final int END_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>Place Types</b></em>' enumerators.
@@ -127,9 +100,8 @@ public enum PlaceTypes implements Enumerator {
 	private static final PlaceTypes[] VALUES_ARRAY =
 		new PlaceTypes[] {
 			NORMAL,
-			READ,
-			INHIBIT,
-			RESETARC,
+			START,
+			END,
 		};
 
 	/**
@@ -187,9 +159,8 @@ public enum PlaceTypes implements Enumerator {
 	public static PlaceTypes get(int value) {
 		switch (value) {
 			case NORMAL_VALUE: return NORMAL;
-			case READ_VALUE: return READ;
-			case INHIBIT_VALUE: return INHIBIT;
-			case RESETARC_VALUE: return RESETARC;
+			case START_VALUE: return START;
+			case END_VALUE: return END;
 		}
 		return null;
 	}

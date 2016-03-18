@@ -6,10 +6,7 @@ Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8yawl.yawltypes,
- yawlnet.yawltypes,
- yawlnet.yawltypes.impl,
- yawlnet.yawltypes.util
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: yawlnet.yawltypes,
  yawlnet.yawltypes.impl,
  yawlnet.yawltypes.util

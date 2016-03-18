@@ -81,8 +81,8 @@ public class YawltypesAdapterFactory extends AdapterFactoryImpl {
 				return createPlaceAdapter();
 			}
 			@Override
-			public Adapter caseTransistion(Transistion object) {
-				return createTransistionAdapter();
+			public Adapter caseTransition(yawlnet.yawltypes.Transition object) {
+				return createTransitionAdapter();
 			}
 			@Override
 			public Adapter caseArc(Arc object) {
@@ -129,8 +129,8 @@ public class YawltypesAdapterFactory extends AdapterFactoryImpl {
 				return createTransitionNodeAdapter();
 			}
 			@Override
-			public Adapter caseTransition(Transition object) {
-				return createTransitionAdapter();
+			public Adapter casePnmlcoremodel_Transition(Transition object) {
+				return createPnmlcoremodel_TransitionAdapter();
 			}
 			@Override
 			public Adapter casePnmlcoremodel_Arc(org.pnml.tools.epnk.pnmlcoremodel.Arc object) {
@@ -179,20 +179,6 @@ public class YawltypesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPlaceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link yawlnet.yawltypes.Transistion <em>Transistion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see yawlnet.yawltypes.Transistion
-	 * @generated
-	 */
-	public Adapter createTransistionAdapter() {
 		return null;
 	}
 
@@ -358,6 +344,20 @@ public class YawltypesAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see org.pnml.tools.epnk.pnmlcoremodel.Transition
+	 * @generated
+	 */
+	public Adapter createPnmlcoremodel_TransitionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link yawlnet.yawltypes.Transition <em>Transition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see yawlnet.yawltypes.Transition
 	 * @generated
 	 */
 	public Adapter createTransitionAdapter() {

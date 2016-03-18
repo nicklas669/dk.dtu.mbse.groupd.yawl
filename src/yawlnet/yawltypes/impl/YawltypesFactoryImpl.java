@@ -58,7 +58,7 @@ public class YawltypesFactoryImpl extends EFactoryImpl implements YawltypesFacto
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case YawltypesPackage.PLACE: return createPlace();
-			case YawltypesPackage.TRANSISTION: return createTransistion();
+			case YawltypesPackage.TRANSITION: return createTransition();
 			case YawltypesPackage.ARC: return createArc();
 			case YawltypesPackage.YAW_LNET: return createYAWLnet();
 			case YawltypesPackage.TRANSITION_TYPE: return createTransitionType();
@@ -122,9 +122,9 @@ public class YawltypesFactoryImpl extends EFactoryImpl implements YawltypesFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Transistion createTransistion() {
-		TransistionImpl transistion = new TransistionImpl();
-		return transistion;
+	public Transition createTransition() {
+		TransitionImpl transition = new TransitionImpl();
+		return transition;
 	}
 
 	/**

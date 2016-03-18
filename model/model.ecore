@@ -3,10 +3,10 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="yawltypes" nsURI="http://compute.dtu.dk/mbse/groupdpetrinet"
     nsPrefix="groupdpn">
   <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Place">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="marking" eType="#//PlaceType"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//PlaceType"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Transistion" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Transition">
+  <eClassifiers xsi:type="ecore:EClass" name="Transition" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Transition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="split" eType="#//TransitionType"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="join" eType="#//TransitionType"
@@ -26,10 +26,9 @@
     <eLiterals name="OR" value="2" literal="OR"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PlaceTypes">
-    <eLiterals name="normal" literal="Place"/>
-    <eLiterals name="read" value="1"/>
-    <eLiterals name="inhibit" value="2"/>
-    <eLiterals name="resetarc" value="3"/>
+    <eLiterals name="normal" literal="normal"/>
+    <eLiterals name="start" value="1" literal="start"/>
+    <eLiterals name="end" value="2" literal="end"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PlaceType" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Attribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="#//PlaceTypes"/>
@@ -39,7 +38,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ArcTypes">
     <eLiterals name="normal"/>
-    <eLiterals name="read" value="1" literal="read"/>
-    <eLiterals name="resetarc" value="2" literal="resetarc"/>
+    <eLiterals name="resetarc" value="1" literal="resetarc"/>
   </eClassifiers>
 </ecore:EPackage>

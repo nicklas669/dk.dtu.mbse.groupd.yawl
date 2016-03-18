@@ -86,14 +86,14 @@ public class YawltypesSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case YawltypesPackage.TRANSISTION: {
-				Transistion transistion = (Transistion)theEObject;
-				T result = caseTransistion(transistion);
-				if (result == null) result = caseTransition(transistion);
-				if (result == null) result = caseTransitionNode(transistion);
-				if (result == null) result = caseNode(transistion);
-				if (result == null) result = caseObject(transistion);
-				if (result == null) result = caseID(transistion);
+			case YawltypesPackage.TRANSITION: {
+				yawlnet.yawltypes.Transition transition = (yawlnet.yawltypes.Transition)theEObject;
+				T result = caseTransition(transition);
+				if (result == null) result = casePnmlcoremodel_Transition(transition);
+				if (result == null) result = caseTransitionNode(transition);
+				if (result == null) result = caseNode(transition);
+				if (result == null) result = caseObject(transition);
+				if (result == null) result = caseID(transition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -157,17 +157,17 @@ public class YawltypesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Transistion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Transition</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Transistion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Transition</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTransistion(Transistion object) {
+	public T caseTransition(yawlnet.yawltypes.Transition object) {
 		return null;
 	}
 
@@ -347,7 +347,7 @@ public class YawltypesSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTransition(Transition object) {
+	public T casePnmlcoremodel_Transition(Transition object) {
 		return null;
 	}
 

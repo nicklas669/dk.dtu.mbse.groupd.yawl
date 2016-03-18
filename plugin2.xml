@@ -7,6 +7,22 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Tut5 -->
+      <package
+            uri="http://compute.dtu.dk/mbse/groupdpetrinet"
+            class="yawl.yawltypes.yawltypesPackage"
+            genModel="model/Tut5.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated yawl -->
+      <package
+            uri="http://compute.dtu.dk/mbse/groupdpetrinet"
+            class="yawltypes.YawltypesPackage"
+            genModel="model/yawl.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated yawlnet -->
       <package
             uri="http://compute.dtu.dk/mbse/groupdpetrinet"
@@ -14,12 +30,12 @@
             genModel="model/yawlnet.genmodel"/>
    </extension>
 
-	<extension
+<extension
    id="dk.dtu.mbse.groupd.yawl.yawlnet"
    name="YAWL Nets"
    point="org.pnml.tools.epnk.pntd">
    <type
       class="yawlnet.yawltypes.impl.YAWLnetImpl"
       description="Text explaining what this net type is" />
-	</extension>
+</extension>
 </plugin>

@@ -18,7 +18,7 @@ import yawlnet.yawltypes.ArcTypes;
 import yawlnet.yawltypes.Place;
 import yawlnet.yawltypes.PlaceType;
 import yawlnet.yawltypes.PlaceTypes;
-import yawlnet.yawltypes.Transistion;
+import yawlnet.yawltypes.Transition;
 import yawlnet.yawltypes.TransitionType;
 import yawlnet.yawltypes.TransitionTypes;
 import yawlnet.yawltypes.YAWLnet;
@@ -44,7 +44,7 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass transistionEClass = null;
+	private EClass transitionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -180,7 +180,7 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPlace_Marking() {
+	public EReference getPlace_Type() {
 		return (EReference)placeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -189,8 +189,8 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTransistion() {
-		return transistionEClass;
+	public EClass getTransition() {
+		return transitionEClass;
 	}
 
 	/**
@@ -198,8 +198,8 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTransistion_Split() {
-		return (EReference)transistionEClass.getEStructuralFeatures().get(0);
+	public EReference getTransition_Split() {
+		return (EReference)transitionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -207,8 +207,8 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTransistion_Join() {
-		return (EReference)transistionEClass.getEStructuralFeatures().get(1);
+	public EReference getTransition_Join() {
+		return (EReference)transitionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -348,11 +348,11 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 
 		// Create classes and their features
 		placeEClass = createEClass(PLACE);
-		createEReference(placeEClass, PLACE__MARKING);
+		createEReference(placeEClass, PLACE__TYPE);
 
-		transistionEClass = createEClass(TRANSISTION);
-		createEReference(transistionEClass, TRANSISTION__SPLIT);
-		createEReference(transistionEClass, TRANSISTION__JOIN);
+		transitionEClass = createEClass(TRANSITION);
+		createEReference(transitionEClass, TRANSITION__SPLIT);
+		createEReference(transitionEClass, TRANSITION__JOIN);
 
 		arcEClass = createEClass(ARC);
 		createEReference(arcEClass, ARC__TYPE);
@@ -406,7 +406,7 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 
 		// Add supertypes to classes
 		placeEClass.getESuperTypes().add(thePnmlcoremodelPackage.getPlace());
-		transistionEClass.getESuperTypes().add(thePnmlcoremodelPackage.getTransition());
+		transitionEClass.getESuperTypes().add(thePnmlcoremodelPackage.getTransition());
 		arcEClass.getESuperTypes().add(thePnmlcoremodelPackage.getArc());
 		yawLnetEClass.getESuperTypes().add(thePnmlcoremodelPackage.getPetriNetType());
 		transitionTypeEClass.getESuperTypes().add(thePnmlcoremodelPackage.getAttribute());
@@ -415,11 +415,11 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(placeEClass, Place.class, "Place", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPlace_Marking(), this.getPlaceType(), null, "marking", null, 0, 1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPlace_Type(), this.getPlaceType(), null, "type", null, 0, 1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(transistionEClass, Transistion.class, "Transistion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTransistion_Split(), this.getTransitionType(), null, "split", null, 0, 1, Transistion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTransistion_Join(), this.getTransitionType(), null, "join", null, 0, 1, Transistion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTransition_Split(), this.getTransitionType(), null, "split", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransition_Join(), this.getTransitionType(), null, "join", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arcEClass, Arc.class, "Arc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArc_Type(), this.getArcType(), null, "type", null, 0, 1, Arc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -443,13 +443,11 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 
 		initEEnum(placeTypesEEnum, PlaceTypes.class, "PlaceTypes");
 		addEEnumLiteral(placeTypesEEnum, PlaceTypes.NORMAL);
-		addEEnumLiteral(placeTypesEEnum, PlaceTypes.READ);
-		addEEnumLiteral(placeTypesEEnum, PlaceTypes.INHIBIT);
-		addEEnumLiteral(placeTypesEEnum, PlaceTypes.RESETARC);
+		addEEnumLiteral(placeTypesEEnum, PlaceTypes.START);
+		addEEnumLiteral(placeTypesEEnum, PlaceTypes.END);
 
 		initEEnum(arcTypesEEnum, ArcTypes.class, "ArcTypes");
 		addEEnumLiteral(arcTypesEEnum, ArcTypes.NORMAL);
-		addEEnumLiteral(arcTypesEEnum, ArcTypes.READ);
 		addEEnumLiteral(arcTypesEEnum, ArcTypes.RESETARC);
 
 		// Create resource

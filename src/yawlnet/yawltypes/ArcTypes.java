@@ -29,16 +29,6 @@ public enum ArcTypes implements Enumerator {
 	NORMAL(0, "normal", "normal"),
 
 	/**
-	 * The '<em><b>Read</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #READ_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	READ(1, "read", "read"),
-
-	/**
 	 * The '<em><b>Resetarc</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -46,7 +36,7 @@ public enum ArcTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RESETARC(2, "resetarc", "resetarc");
+	RESETARC(1, "resetarc", "resetarc");
 
 	/**
 	 * The '<em><b>Normal</b></em>' literal value.
@@ -64,21 +54,6 @@ public enum ArcTypes implements Enumerator {
 	public static final int NORMAL_VALUE = 0;
 
 	/**
-	 * The '<em><b>Read</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Read</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #READ
-	 * @model name="read"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int READ_VALUE = 1;
-
-	/**
 	 * The '<em><b>Resetarc</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -91,7 +66,7 @@ public enum ArcTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int RESETARC_VALUE = 2;
+	public static final int RESETARC_VALUE = 1;
 
 	/**
 	 * An array of all the '<em><b>Arc Types</b></em>' enumerators.
@@ -102,7 +77,6 @@ public enum ArcTypes implements Enumerator {
 	private static final ArcTypes[] VALUES_ARRAY =
 		new ArcTypes[] {
 			NORMAL,
-			READ,
 			RESETARC,
 		};
 
@@ -161,7 +135,6 @@ public enum ArcTypes implements Enumerator {
 	public static ArcTypes get(int value) {
 		switch (value) {
 			case NORMAL_VALUE: return NORMAL;
-			case READ_VALUE: return READ;
 			case RESETARC_VALUE: return RESETARC;
 		}
 		return null;

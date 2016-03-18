@@ -12,7 +12,7 @@ package yawlnet.yawltypes;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link yawlnet.yawltypes.Place#getMarking <em>Marking</em>}</li>
+ *   <li>{@link yawlnet.yawltypes.Place#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see yawlnet.yawltypes.YawltypesPackage#getPlace()
@@ -21,29 +21,29 @@ package yawlnet.yawltypes;
  */
 public interface Place extends org.pnml.tools.epnk.pnmlcoremodel.Place {
 	/**
-	 * Returns the value of the '<em><b>Marking</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Marking</em>' reference isn't clear,
+	 * If the meaning of the '<em>Type</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Marking</em>' containment reference.
-	 * @see #setMarking(PlaceType)
-	 * @see yawlnet.yawltypes.YawltypesPackage#getPlace_Marking()
+	 * @return the value of the '<em>Type</em>' containment reference.
+	 * @see #setType(PlaceType)
+	 * @see yawlnet.yawltypes.YawltypesPackage#getPlace_Type()
 	 * @model containment="true"
 	 * @generated
 	 */
-	PlaceType getMarking();
+	PlaceType getType();
 
 	/**
-	 * Sets the value of the '{@link yawlnet.yawltypes.Place#getMarking <em>Marking</em>}' containment reference.
+	 * Sets the value of the '{@link yawlnet.yawltypes.Place#getType <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Marking</em>' containment reference.
-	 * @see #getMarking()
+	 * @param value the new value of the '<em>Type</em>' containment reference.
+	 * @see #getType()
 	 * @generated
 	 */
-	void setMarking(PlaceType value);
+	void setType(PlaceType value);
 
 } // Place
