@@ -37,8 +37,9 @@ public class YAWLnetImpl extends PetriNetTypeImpl implements YAWLnet {
 	}
 
 	@Override
-	public String toString() {
-		return "YAWLNet by Group G - DTU 2016";
+	public String toString() {		
+		return "http://dk.dtu.imm.se.mbse-pn.groupd.yawlnet";
+		//return "YAWLNet by Group G - DTU 2016";
 	}
 
 } //YAWLnetImpl
