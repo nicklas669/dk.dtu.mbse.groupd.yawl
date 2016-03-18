@@ -30,4 +30,12 @@
             genModel="model/yawlnet.genmodel"/>
    </extension>
 
+<extension
+   id="dk.dtu.mbse.groupd.yawl.yawlnet"
+   name="YAWL Nets"
+   point="org.pnml.tools.epnk.pntd">
+   <type
+      class="dk.dtu.mbse.groupd.yawl.yawlnet.yawltypes.impl.YAWLNetImpl"
+      description="Text explaining what this net type is" />
+</extension>
 </plugin>
