@@ -22,4 +22,14 @@
       class="yawlnet.yawltypes.impl.YAWLnetImpl"
       description="Text explaining what this net type is" />
 	</extension>
+	
+	<extension
+	id="dk.dtu.mbse.groupg.yawl.graphics"
+	name="Signal event net graphical extensions"
+	point="org.pnml.tools.epnk.diagram.graphics">
+	<graphicsextension
+	class="dk.dtu.mbse.groupg.yawl.graphics.figures.YAWLGraphics"
+	description="Special graphics for ... signal event nets">
+	</graphicsextension>
+	</extension>
 </plugin>
