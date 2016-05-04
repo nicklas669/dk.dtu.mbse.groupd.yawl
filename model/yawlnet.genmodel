@@ -31,6 +31,7 @@
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Arc">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Arc/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Arc/inscription"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//YAWLnet"/>
     <genClasses ecoreClass="model.ecore#//TransitionType">
@@ -42,5 +43,12 @@
     <genClasses ecoreClass="model.ecore#//ArcType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ArcType/text"/>
     </genClasses>
+    <genClasses ecoreClass="model.ecore#//YAWLNetArcAnnotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//YAWLNetArcAnnotation/text"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Pnmldatatypes" ecorePackage="PNMLDataTypes.ecore#/">
+    <genDataTypes ecoreDataType="PNMLDataTypes.ecore#//PositiveInteger"/>
+    <genDataTypes ecoreDataType="PNMLDataTypes.ecore#//NonNegativeInteger"/>
   </genPackages>
 </genmodel:GenModel>

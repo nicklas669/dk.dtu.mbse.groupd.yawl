@@ -105,6 +105,10 @@ public class YawltypesAdapterFactory extends AdapterFactoryImpl {
 				return createArcTypeAdapter();
 			}
 			@Override
+			public Adapter caseYAWLNetArcAnnotation(YAWLNetArcAnnotation object) {
+				return createYAWLNetArcAnnotationAdapter();
+			}
+			@Override
 			public Adapter caseID(ID object) {
 				return createIDAdapter();
 			}
@@ -249,6 +253,20 @@ public class YawltypesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createArcTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link yawlnet.yawltypes.YAWLNetArcAnnotation <em>YAWL Net Arc Annotation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see yawlnet.yawltypes.YAWLNetArcAnnotation
+	 * @generated
+	 */
+	public Adapter createYAWLNetArcAnnotationAdapter() {
 		return null;
 	}
 

@@ -14,6 +14,14 @@
             genModel="model/yawlnet.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated yawlnet -->
+      <package
+            uri="http://org.pnml.tools/epnk/datatypes"
+            class="pnmldatatypes.PnmldatatypesPackage"
+            genModel="model/yawlnet.genmodel"/>
+   </extension>
+
 	<extension
    id="dk.dtu.mbse.groupd.yawl.yawlnet"
    name="YAWL Nets"

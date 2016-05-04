@@ -85,6 +85,15 @@ public interface YawltypesFactory extends EFactory {
 	ArcType createArcType();
 
 	/**
+	 * Returns a new object of class '<em>YAWL Net Arc Annotation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>YAWL Net Arc Annotation</em>'.
+	 * @generated
+	 */
+	YAWLNetArcAnnotation createYAWLNetArcAnnotation();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
