@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import yawlnet.yawltypes.Arc;
 import yawlnet.yawltypes.ArcType;
+import yawlnet.yawltypes.YAWLNetArcAnnotation;
 import yawlnet.yawltypes.YawltypesPackage;
 
 /**
@@ -23,6 +24,7 @@ import yawlnet.yawltypes.YawltypesPackage;
  * </p>
  * <ul>
  *   <li>{@link yawlnet.yawltypes.impl.ArcImpl#getType <em>Type</em>}</li>
+ *   <li>{@link yawlnet.yawltypes.impl.ArcImpl#getInscription <em>Inscription</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,6 +39,16 @@ public class ArcImpl extends org.pnml.tools.epnk.pnmlcoremodel.impl.ArcImpl impl
 	 * @ordered
 	 */
 	protected ArcType type;
+
+	/**
+	 * The cached value of the '{@link #getInscription() <em>Inscription</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInscription()
+	 * @generated
+	 * @ordered
+	 */
+	protected YAWLNetArcAnnotation inscription;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,6 +117,44 @@ public class ArcImpl extends org.pnml.tools.epnk.pnmlcoremodel.impl.ArcImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public YAWLNetArcAnnotation getInscription() {
+		if (inscription != null && inscription.eIsProxy()) {
+			InternalEObject oldInscription = (InternalEObject)inscription;
+			inscription = (YAWLNetArcAnnotation)eResolveProxy(oldInscription);
+			if (inscription != oldInscription) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, YawltypesPackage.ARC__INSCRIPTION, oldInscription, inscription));
+			}
+		}
+		return inscription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YAWLNetArcAnnotation basicGetInscription() {
+		return inscription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInscription(YAWLNetArcAnnotation newInscription) {
+		YAWLNetArcAnnotation oldInscription = inscription;
+		inscription = newInscription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, YawltypesPackage.ARC__INSCRIPTION, oldInscription, inscription));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -124,6 +174,9 @@ public class ArcImpl extends org.pnml.tools.epnk.pnmlcoremodel.impl.ArcImpl impl
 		switch (featureID) {
 			case YawltypesPackage.ARC__TYPE:
 				return getType();
+			case YawltypesPackage.ARC__INSCRIPTION:
+				if (resolve) return getInscription();
+				return basicGetInscription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -138,6 +191,9 @@ public class ArcImpl extends org.pnml.tools.epnk.pnmlcoremodel.impl.ArcImpl impl
 		switch (featureID) {
 			case YawltypesPackage.ARC__TYPE:
 				setType((ArcType)newValue);
+				return;
+			case YawltypesPackage.ARC__INSCRIPTION:
+				setInscription((YAWLNetArcAnnotation)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -154,6 +210,9 @@ public class ArcImpl extends org.pnml.tools.epnk.pnmlcoremodel.impl.ArcImpl impl
 			case YawltypesPackage.ARC__TYPE:
 				setType((ArcType)null);
 				return;
+			case YawltypesPackage.ARC__INSCRIPTION:
+				setInscription((YAWLNetArcAnnotation)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -168,6 +227,8 @@ public class ArcImpl extends org.pnml.tools.epnk.pnmlcoremodel.impl.ArcImpl impl
 		switch (featureID) {
 			case YawltypesPackage.ARC__TYPE:
 				return type != null;
+			case YawltypesPackage.ARC__INSCRIPTION:
+				return inscription != null;
 		}
 		return super.eIsSet(featureID);
 	}

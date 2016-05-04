@@ -64,6 +64,7 @@ public class YawltypesFactoryImpl extends EFactoryImpl implements YawltypesFacto
 			case YawltypesPackage.TRANSITION_TYPE: return createTransitionType();
 			case YawltypesPackage.PLACE_TYPE: return createPlaceType();
 			case YawltypesPackage.ARC_TYPE: return createArcType();
+			case YawltypesPackage.YAWL_NET_ARC_ANNOTATION: return createYAWLNetArcAnnotation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -175,6 +176,16 @@ public class YawltypesFactoryImpl extends EFactoryImpl implements YawltypesFacto
 	public ArcType createArcType() {
 		ArcTypeImpl arcType = new ArcTypeImpl();
 		return arcType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YAWLNetArcAnnotation createYAWLNetArcAnnotation() {
+		YAWLNetArcAnnotationImpl yawlNetArcAnnotation = new YAWLNetArcAnnotationImpl();
+		return yawlNetArcAnnotation;
 	}
 
 	/**

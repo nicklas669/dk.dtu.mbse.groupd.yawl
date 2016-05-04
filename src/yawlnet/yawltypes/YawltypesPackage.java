@@ -332,13 +332,22 @@ public interface YawltypesPackage extends EPackage {
 	int ARC__TYPE = PnmlcoremodelPackage.ARC_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Inscription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC__INSCRIPTION = PnmlcoremodelPackage.ARC_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Arc</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_FEATURE_COUNT = PnmlcoremodelPackage.ARC_FEATURE_COUNT + 1;
+	int ARC_FEATURE_COUNT = PnmlcoremodelPackage.ARC_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link yawlnet.yawltypes.impl.YAWLnetImpl <em>YAW Lnet</em>}' class.
@@ -525,6 +534,61 @@ public interface YawltypesPackage extends EPackage {
 	int ARC_TYPE_FEATURE_COUNT = PnmlcoremodelPackage.ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link yawlnet.yawltypes.impl.YAWLNetArcAnnotationImpl <em>YAWL Net Arc Annotation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see yawlnet.yawltypes.impl.YAWLNetArcAnnotationImpl
+	 * @see yawlnet.yawltypes.impl.YawltypesPackageImpl#getYAWLNetArcAnnotation()
+	 * @generated
+	 */
+	int YAWL_NET_ARC_ANNOTATION = 7;
+
+	/**
+	 * The feature id for the '<em><b>Toolspecific</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YAWL_NET_ARC_ANNOTATION__TOOLSPECIFIC = PnmlcoremodelPackage.LABEL__TOOLSPECIFIC;
+
+	/**
+	 * The feature id for the '<em><b>Graphics</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YAWL_NET_ARC_ANNOTATION__GRAPHICS = PnmlcoremodelPackage.LABEL__GRAPHICS;
+
+	/**
+	 * The feature id for the '<em><b>Unknown</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YAWL_NET_ARC_ANNOTATION__UNKNOWN = PnmlcoremodelPackage.LABEL__UNKNOWN;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YAWL_NET_ARC_ANNOTATION__TEXT = PnmlcoremodelPackage.LABEL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>YAWL Net Arc Annotation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YAWL_NET_ARC_ANNOTATION_FEATURE_COUNT = PnmlcoremodelPackage.LABEL_FEATURE_COUNT + 1;
+
+	/**
 	 * The meta object id for the '{@link yawlnet.yawltypes.TransitionTypes <em>Transition Types</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -532,7 +596,7 @@ public interface YawltypesPackage extends EPackage {
 	 * @see yawlnet.yawltypes.impl.YawltypesPackageImpl#getTransitionTypes()
 	 * @generated
 	 */
-	int TRANSITION_TYPES = 7;
+	int TRANSITION_TYPES = 8;
 
 	/**
 	 * The meta object id for the '{@link yawlnet.yawltypes.PlaceTypes <em>Place Types</em>}' enum.
@@ -542,7 +606,7 @@ public interface YawltypesPackage extends EPackage {
 	 * @see yawlnet.yawltypes.impl.YawltypesPackageImpl#getPlaceTypes()
 	 * @generated
 	 */
-	int PLACE_TYPES = 8;
+	int PLACE_TYPES = 9;
 
 	/**
 	 * The meta object id for the '{@link yawlnet.yawltypes.ArcTypes <em>Arc Types</em>}' enum.
@@ -552,7 +616,7 @@ public interface YawltypesPackage extends EPackage {
 	 * @see yawlnet.yawltypes.impl.YawltypesPackageImpl#getArcTypes()
 	 * @generated
 	 */
-	int ARC_TYPES = 9;
+	int ARC_TYPES = 10;
 
 
 	/**
@@ -630,6 +694,17 @@ public interface YawltypesPackage extends EPackage {
 	EReference getArc_Type();
 
 	/**
+	 * Returns the meta object for the reference '{@link yawlnet.yawltypes.Arc#getInscription <em>Inscription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Inscription</em>'.
+	 * @see yawlnet.yawltypes.Arc#getInscription()
+	 * @see #getArc()
+	 * @generated
+	 */
+	EReference getArc_Inscription();
+
+	/**
 	 * Returns the meta object for class '{@link yawlnet.yawltypes.YAWLnet <em>YAW Lnet</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -701,6 +776,27 @@ public interface YawltypesPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getArcType_Text();
+
+	/**
+	 * Returns the meta object for class '{@link yawlnet.yawltypes.YAWLNetArcAnnotation <em>YAWL Net Arc Annotation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>YAWL Net Arc Annotation</em>'.
+	 * @see yawlnet.yawltypes.YAWLNetArcAnnotation
+	 * @generated
+	 */
+	EClass getYAWLNetArcAnnotation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link yawlnet.yawltypes.YAWLNetArcAnnotation#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see yawlnet.yawltypes.YAWLNetArcAnnotation#getText()
+	 * @see #getYAWLNetArcAnnotation()
+	 * @generated
+	 */
+	EAttribute getYAWLNetArcAnnotation_Text();
 
 	/**
 	 * Returns the meta object for enum '{@link yawlnet.yawltypes.TransitionTypes <em>Transition Types</em>}'.
@@ -817,6 +913,14 @@ public interface YawltypesPackage extends EPackage {
 		EReference ARC__TYPE = eINSTANCE.getArc_Type();
 
 		/**
+		 * The meta object literal for the '<em><b>Inscription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARC__INSCRIPTION = eINSTANCE.getArc_Inscription();
+
+		/**
 		 * The meta object literal for the '{@link yawlnet.yawltypes.impl.YAWLnetImpl <em>YAW Lnet</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -879,6 +983,24 @@ public interface YawltypesPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ARC_TYPE__TEXT = eINSTANCE.getArcType_Text();
+
+		/**
+		 * The meta object literal for the '{@link yawlnet.yawltypes.impl.YAWLNetArcAnnotationImpl <em>YAWL Net Arc Annotation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see yawlnet.yawltypes.impl.YAWLNetArcAnnotationImpl
+		 * @see yawlnet.yawltypes.impl.YawltypesPackageImpl#getYAWLNetArcAnnotation()
+		 * @generated
+		 */
+		EClass YAWL_NET_ARC_ANNOTATION = eINSTANCE.getYAWLNetArcAnnotation();
+
+		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YAWL_NET_ARC_ANNOTATION__TEXT = eINSTANCE.getYAWLNetArcAnnotation_Text();
 
 		/**
 		 * The meta object literal for the '{@link yawlnet.yawltypes.TransitionTypes <em>Transition Types</em>}' enum.

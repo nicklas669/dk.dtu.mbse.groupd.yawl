@@ -13,6 +13,7 @@ package yawlnet.yawltypes;
  * </p>
  * <ul>
  *   <li>{@link yawlnet.yawltypes.Arc#getType <em>Type</em>}</li>
+ *   <li>{@link yawlnet.yawltypes.Arc#getInscription <em>Inscription</em>}</li>
  * </ul>
  *
  * @see yawlnet.yawltypes.YawltypesPackage#getArc()
@@ -45,5 +46,31 @@ public interface Arc extends org.pnml.tools.epnk.pnmlcoremodel.Arc {
 	 * @generated
 	 */
 	void setType(ArcType value);
+
+	/**
+	 * Returns the value of the '<em><b>Inscription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Inscription</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Inscription</em>' reference.
+	 * @see #setInscription(YAWLNetArcAnnotation)
+	 * @see yawlnet.yawltypes.YawltypesPackage#getArc_Inscription()
+	 * @model
+	 * @generated
+	 */
+	YAWLNetArcAnnotation getInscription();
+
+	/**
+	 * Sets the value of the '{@link yawlnet.yawltypes.Arc#getInscription <em>Inscription</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Inscription</em>' reference.
+	 * @see #getInscription()
+	 * @generated
+	 */
+	void setInscription(YAWLNetArcAnnotation value);
 
 } // Arc

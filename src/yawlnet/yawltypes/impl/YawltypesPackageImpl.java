@@ -9,9 +9,10 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
 import org.pnml.tools.epnk.pnmlcoremodel.PnmlcoremodelPackage;
 
+import pnmldatatypes.PnmldatatypesPackage;
+import pnmldatatypes.impl.PnmldatatypesPackageImpl;
 import yawlnet.yawltypes.Arc;
 import yawlnet.yawltypes.ArcType;
 import yawlnet.yawltypes.ArcTypes;
@@ -21,6 +22,7 @@ import yawlnet.yawltypes.PlaceTypes;
 import yawlnet.yawltypes.Transition;
 import yawlnet.yawltypes.TransitionType;
 import yawlnet.yawltypes.TransitionTypes;
+import yawlnet.yawltypes.YAWLNetArcAnnotation;
 import yawlnet.yawltypes.YAWLnet;
 import yawlnet.yawltypes.YawltypesFactory;
 import yawlnet.yawltypes.YawltypesPackage;
@@ -80,6 +82,13 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 	 * @generated
 	 */
 	private EClass arcTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass yawlNetArcAnnotationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -151,11 +160,16 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 		// Initialize simple dependencies
 		PnmlcoremodelPackage.eINSTANCE.eClass();
 
+		// Obtain or create and register interdependencies
+		PnmldatatypesPackageImpl thePnmldatatypesPackage = (PnmldatatypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PnmldatatypesPackage.eNS_URI) instanceof PnmldatatypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PnmldatatypesPackage.eNS_URI) : PnmldatatypesPackage.eINSTANCE);
+
 		// Create package meta-data objects
 		theYawltypesPackage.createPackageContents();
+		thePnmldatatypesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theYawltypesPackage.initializePackageContents();
+		thePnmldatatypesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theYawltypesPackage.freeze();
@@ -234,6 +248,15 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getArc_Inscription() {
+		return (EReference)arcEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getYAWLnet() {
 		return yawLnetEClass;
 	}
@@ -290,6 +313,24 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 	 */
 	public EAttribute getArcType_Text() {
 		return (EAttribute)arcTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getYAWLNetArcAnnotation() {
+		return yawlNetArcAnnotationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYAWLNetArcAnnotation_Text() {
+		return (EAttribute)yawlNetArcAnnotationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -356,6 +397,7 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 
 		arcEClass = createEClass(ARC);
 		createEReference(arcEClass, ARC__TYPE);
+		createEReference(arcEClass, ARC__INSCRIPTION);
 
 		yawLnetEClass = createEClass(YAW_LNET);
 
@@ -367,6 +409,9 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 
 		arcTypeEClass = createEClass(ARC_TYPE);
 		createEAttribute(arcTypeEClass, ARC_TYPE__TEXT);
+
+		yawlNetArcAnnotationEClass = createEClass(YAWL_NET_ARC_ANNOTATION);
+		createEAttribute(yawlNetArcAnnotationEClass, YAWL_NET_ARC_ANNOTATION__TEXT);
 
 		// Create enums
 		transitionTypesEEnum = createEEnum(TRANSITION_TYPES);
@@ -399,6 +444,7 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 
 		// Obtain other dependent packages
 		PnmlcoremodelPackage thePnmlcoremodelPackage = (PnmlcoremodelPackage)EPackage.Registry.INSTANCE.getEPackage(PnmlcoremodelPackage.eNS_URI);
+		PnmldatatypesPackage thePnmldatatypesPackage = (PnmldatatypesPackage)EPackage.Registry.INSTANCE.getEPackage(PnmldatatypesPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -412,6 +458,7 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 		transitionTypeEClass.getESuperTypes().add(thePnmlcoremodelPackage.getAttribute());
 		placeTypeEClass.getESuperTypes().add(thePnmlcoremodelPackage.getAttribute());
 		arcTypeEClass.getESuperTypes().add(thePnmlcoremodelPackage.getAttribute());
+		yawlNetArcAnnotationEClass.getESuperTypes().add(thePnmlcoremodelPackage.getLabel());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(placeEClass, Place.class, "Place", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -423,6 +470,7 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 
 		initEClass(arcEClass, Arc.class, "Arc", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArc_Type(), this.getArcType(), null, "type", null, 0, 1, Arc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArc_Inscription(), this.getYAWLNetArcAnnotation(), null, "inscription", null, 0, 1, Arc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yawLnetEClass, YAWLnet.class, "YAWLnet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -434,6 +482,9 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 
 		initEClass(arcTypeEClass, ArcType.class, "ArcType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getArcType_Text(), this.getArcTypes(), "text", null, 0, 1, ArcType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(yawlNetArcAnnotationEClass, YAWLNetArcAnnotation.class, "YAWLNetArcAnnotation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getYAWLNetArcAnnotation_Text(), thePnmldatatypesPackage.getPositiveInteger(), "text", "1", 1, 1, YAWLNetArcAnnotation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(transitionTypesEEnum, TransitionTypes.class, "TransitionTypes");
