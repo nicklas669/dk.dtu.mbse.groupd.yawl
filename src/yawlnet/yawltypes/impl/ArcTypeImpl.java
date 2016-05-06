@@ -3,9 +3,11 @@
 package yawlnet.yawltypes.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.pnml.tools.epnk.pnmlcoremodel.impl.AttributeImpl;
 
 import yawlnet.yawltypes.ArcType;
@@ -35,6 +37,7 @@ public class ArcTypeImpl extends AttributeImpl implements ArcType {
 	 * @ordered
 	 */
 	protected static final ArcTypes TEXT_EDEFAULT = ArcTypes.NORMAL;
+
 	/**
 	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->

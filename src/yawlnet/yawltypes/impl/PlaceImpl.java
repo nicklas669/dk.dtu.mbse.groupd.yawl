@@ -3,8 +3,8 @@
 package yawlnet.yawltypes.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -37,6 +37,7 @@ public class PlaceImpl extends org.pnml.tools.epnk.pnmlcoremodel.impl.PlaceImpl 
 	 * @ordered
 	 */
 	protected PlaceType type;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

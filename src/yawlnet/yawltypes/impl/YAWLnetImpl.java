@@ -36,10 +36,16 @@ public class YAWLnetImpl extends PetriNetTypeImpl implements YAWLnet {
 		return YawltypesPackage.Literals.YAW_LNET;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	@Override
-	public String toString() {		
+	public String toString() {
+		// TODO Auto-generated method stub
+		// The toString() must return the URI which must be unique for this Petri net type.
 		return "http://dk.dtu.imm.se.mbse-pn.groupg.yawlnet";
-		//return "YAWLNet by Group G - DTU 2016";
 	}
 
 } //YAWLnetImpl

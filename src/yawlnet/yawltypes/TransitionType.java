@@ -21,7 +21,6 @@ import org.pnml.tools.epnk.pnmlcoremodel.Attribute;
  * @generated
  */
 public interface TransitionType extends Attribute {
-
 	/**
 	 * Returns the value of the '<em><b>Text</b></em>' attribute.
 	 * The literals are from the enumeration {@link yawlnet.yawltypes.TransitionTypes}.
@@ -50,4 +49,5 @@ public interface TransitionType extends Attribute {
 	 * @generated
 	 */
 	void setText(TransitionTypes value);
+
 } // TransitionType

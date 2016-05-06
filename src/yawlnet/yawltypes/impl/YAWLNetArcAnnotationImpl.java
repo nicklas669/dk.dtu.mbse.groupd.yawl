@@ -11,7 +11,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.pnml.tools.epnk.datatypes.pnmldatatypes.PnmldatatypesFactory;
 import org.pnml.tools.epnk.datatypes.pnmldatatypes.PnmldatatypesPackage;
 import org.pnml.tools.epnk.datatypes.pnmldatatypes.PositiveInteger;
+
 import org.pnml.tools.epnk.pnmlcoremodel.impl.LabelImpl;
+
 import yawlnet.yawltypes.YAWLNetArcAnnotation;
 import yawlnet.yawltypes.YawltypesPackage;
 

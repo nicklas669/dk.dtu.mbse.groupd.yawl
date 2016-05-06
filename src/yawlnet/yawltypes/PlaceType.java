@@ -21,7 +21,6 @@ import org.pnml.tools.epnk.pnmlcoremodel.Attribute;
  * @generated
  */
 public interface PlaceType extends Attribute {
-
 	/**
 	 * Returns the value of the '<em><b>Text</b></em>' attribute.
 	 * The literals are from the enumeration {@link yawlnet.yawltypes.PlaceTypes}.
@@ -50,4 +49,5 @@ public interface PlaceType extends Attribute {
 	 * @generated
 	 */
 	void setText(PlaceTypes value);
+
 } // PlaceType

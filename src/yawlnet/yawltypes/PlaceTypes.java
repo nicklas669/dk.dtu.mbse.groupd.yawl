@@ -36,7 +36,9 @@ public enum PlaceTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	START(1, "start", "start"), /**
+	START(1, "start", "start"),
+
+	/**
 	 * The '<em><b>End</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

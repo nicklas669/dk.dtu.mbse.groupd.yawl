@@ -13,7 +13,6 @@ import org.pnml.tools.epnk.pnmlcoremodel.Label;
 import org.pnml.tools.epnk.pnmlcoremodel.Node;
 import org.pnml.tools.epnk.pnmlcoremodel.PetriNetType;
 import org.pnml.tools.epnk.pnmlcoremodel.PlaceNode;
-import org.pnml.tools.epnk.pnmlcoremodel.Transition;
 import org.pnml.tools.epnk.pnmlcoremodel.TransitionNode;
 
 import yawlnet.yawltypes.*;
@@ -87,7 +86,7 @@ public class YawltypesSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case YawltypesPackage.TRANSITION: {
-				yawlnet.yawltypes.Transition transition = (yawlnet.yawltypes.Transition)theEObject;
+				Transition transition = (Transition)theEObject;
 				T result = caseTransition(transition);
 				if (result == null) result = casePnmlcoremodel_Transition(transition);
 				if (result == null) result = caseTransitionNode(transition);
@@ -174,7 +173,7 @@ public class YawltypesSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTransition(yawlnet.yawltypes.Transition object) {
+	public T caseTransition(Transition object) {
 		return null;
 	}
 
@@ -369,7 +368,7 @@ public class YawltypesSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePnmlcoremodel_Transition(Transition object) {
+	public T casePnmlcoremodel_Transition(org.pnml.tools.epnk.pnmlcoremodel.Transition object) {
 		return null;
 	}
 
