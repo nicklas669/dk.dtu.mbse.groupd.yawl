@@ -42,7 +42,11 @@
     <eLiterals name="resetarc" value="1" literal="resetarc"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YAWLNetArcAnnotation" eSuperTypes="../../org.pnml.tools.epnk/model/PNMLCoreModel.ecore#//Label">
+<<<<<<< HEAD
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType ../../org.pnml.tools.epnk/model/PNMLDataTypes.ecore#//PositiveInteger"
+=======
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType PNMLDataTypes.ecore#//PositiveInteger"
+>>>>>>> refs/heads/master
         defaultValueLiteral="1"/>
   </eClassifiers>
 </ecore:EPackage>

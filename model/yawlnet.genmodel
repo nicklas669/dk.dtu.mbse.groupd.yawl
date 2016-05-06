@@ -46,5 +46,12 @@
     <genClasses ecoreClass="model.ecore#//YAWLNetArcAnnotation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//YAWLNetArcAnnotation/text"/>
     </genClasses>
+<<<<<<< HEAD
+=======
+  </genPackages>
+  <genPackages prefix="Pnmldatatypes" ecorePackage="PNMLDataTypes.ecore#/">
+    <genDataTypes ecoreDataType="PNMLDataTypes.ecore#//PositiveInteger"/>
+    <genDataTypes ecoreDataType="PNMLDataTypes.ecore#//NonNegativeInteger"/>
+>>>>>>> refs/heads/master
   </genPackages>
 </genmodel:GenModel>
