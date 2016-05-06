@@ -34,7 +34,7 @@ public interface YAWLNetArcAnnotation extends Label {
 	 * @return the value of the '<em>Text</em>' attribute.
 	 * @see #setText(PositiveInteger)
 	 * @see yawlnet.yawltypes.YawltypesPackage#getYAWLNetArcAnnotation_Text()
-	 * @model default="1" dataType="pnmldatatypes.PositiveInteger" required="true"
+	 * @model default="1" dataType="org.pnml.tools.epnk.datatypes.pnmldatatypes.PositiveInteger" required="true"
 	 * @generated
 	 */
 	PositiveInteger getText();

@@ -10,9 +10,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.pnml.tools.epnk.pnmlcoremodel.PnmlcoremodelPackage;
-
-import pnmldatatypes.PnmldatatypesPackage;
-import pnmldatatypes.impl.PnmldatatypesPackageImpl;
+import org.pnml.tools.epnk.datatypes.pnmldatatypes.PnmldatatypesPackage;
 import yawlnet.yawltypes.Arc;
 import yawlnet.yawltypes.ArcType;
 import yawlnet.yawltypes.ArcTypes;
@@ -159,17 +157,13 @@ public class YawltypesPackageImpl extends EPackageImpl implements YawltypesPacka
 
 		// Initialize simple dependencies
 		PnmlcoremodelPackage.eINSTANCE.eClass();
-
-		// Obtain or create and register interdependencies
-		PnmldatatypesPackageImpl thePnmldatatypesPackage = (PnmldatatypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PnmldatatypesPackage.eNS_URI) instanceof PnmldatatypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PnmldatatypesPackage.eNS_URI) : PnmldatatypesPackage.eINSTANCE);
+		PnmldatatypesPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theYawltypesPackage.createPackageContents();
-		thePnmldatatypesPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theYawltypesPackage.initializePackageContents();
-		thePnmldatatypesPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theYawltypesPackage.freeze();

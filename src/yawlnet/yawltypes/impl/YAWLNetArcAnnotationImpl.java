@@ -10,9 +10,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.pnml.tools.epnk.datatypes.pnmldatatypes.PositiveInteger;
 import org.pnml.tools.epnk.pnmlcoremodel.impl.LabelImpl;
-
-import pnmldatatypes.PnmldatatypesFactory;
-import pnmldatatypes.PnmldatatypesPackage;
 import yawlnet.yawltypes.YAWLNetArcAnnotation;
 import yawlnet.yawltypes.YawltypesPackage;
 
@@ -38,7 +35,7 @@ public class YAWLNetArcAnnotationImpl extends LabelImpl implements YAWLNetArcAnn
 	 * @generated
 	 * @ordered
 	 */
-	protected static final PositiveInteger TEXT_EDEFAULT = (PositiveInteger)PnmldatatypesFactory.eINSTANCE.createFromString(PnmldatatypesPackage.eINSTANCE.getPositiveInteger(), "1");
+	protected static final PositiveInteger TEXT_EDEFAULT = (PositiveInteger)org.pnml.tools.epnk.datatypes.pnmldatatypes.PnmldatatypesFactory.eINSTANCE.createFromString(org.pnml.tools.epnk.datatypes.pnmldatatypes.PnmldatatypesPackage.eINSTANCE.getPositiveInteger(), "1");
 
 	/**
 	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
