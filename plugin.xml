@@ -111,7 +111,7 @@
                   A YAWL net must have one start and end place.
                </description>
                <message>
-                  The YAWL net {0} does not have exactly one start place and one end place.
+                  {0}
                </message>
             </constraint>
          </constraints>
