@@ -114,6 +114,26 @@
                   {0}
                </message>
             </constraint>
+            
+            <constraint
+                  lang="Java"
+                  class="yawlnet.yawltypes.TransitionInOutConditions"
+                  severity="ERROR"
+                  mode="Batch"
+                  name="Transitions must have atleast 1 input and atleast 1 output Arc"
+                  id="dk.dtu.compute.mbse.yawl.validation.transition-in-out-atleast1"
+                  statusCode="402">
+               <!-- TODO the class here needs to refer to Ecore class of the YAWL Petri net type
+                    (name and URI of the package separated by a colon) -->
+               <target class="YAWLnet:http://compute.dtu.dk/mbse/groupdpetrinet"/>
+               <description>
+                  A YAWL net transition must have atleast 1 input Arc and atleast 1 output Arc.
+               </description>
+               <message>
+                  {0}
+               </message>
+            </constraint>
+            
          </constraints>
       </constraintProvider>
    </extension>
